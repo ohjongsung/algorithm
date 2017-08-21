@@ -20,27 +20,27 @@ public class Problem03 {
         System.out.println(result);
     }
 
-    public static String replaceSpaces(String str, int length) {
-        char[] arr_s = str.toCharArray();
+    private static String replaceSpaces(String str, int length) {
+        char[] arrStr = str.toCharArray();
         int count = 0;
         for (int i = 0; i < length; i++) {
-            if (arr_s[i] == ' ') {
+            if (arrStr[i] == ' ') {
                 count++;
             }
         }
         int newLength = length + count * 2;
-        char[] arr_new = new char[newLength];
+        char[] arrNewStr = new char[newLength];
         for (int i = length - 1; i >= 0; i--) {
-            if (arr_s[i] == ' ') {
-                arr_new[newLength - 1] = '0';
-                arr_new[newLength - 2] = '2';
-                arr_new[newLength - 3] = '%';
+            if (arrStr[i] == ' ') {
+                arrNewStr[newLength - 1] = '0';
+                arrNewStr[newLength - 2] = '2';
+                arrNewStr[newLength - 3] = '%';
                 newLength = newLength - 3;
             } else {
-                arr_new[newLength - 1] = arr_s[i];
+                arrNewStr[newLength - 1] = arrStr[i];
                 newLength = newLength - 1;
             }
         }
-        return new String(arr_new, 0, arr_new.length);
+        return new String(arrNewStr, 0, arrNewStr.length);
     }
 }
