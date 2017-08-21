@@ -11,7 +11,6 @@ public class Problem01 {
     public static void main(String[] args) {
         String s = "국민을위한국가";
 
-
         boolean Unique = isUnique(s);
         System.out.println(Unique);
     }
