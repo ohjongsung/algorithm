@@ -18,15 +18,11 @@ public class Problem02 {
         System.out.println(permutation);
     }
 
-    public static boolean isPermutation(String s1, String s2) {
-        if (s1.length() != s2.length()) {
-            return false;
-        }
-
-        return sort(s1).equals(sort(s2));
+    private static boolean isPermutation(String s1, String s2) {
+        return s1.length() == s2.length() && sort(s1).equals(sort(s2));
     }
 
-    public static String sort(String s) {
+    private static String sort(String s) {
         char[] content = s.toCharArray();
         Arrays.sort(content);
 
