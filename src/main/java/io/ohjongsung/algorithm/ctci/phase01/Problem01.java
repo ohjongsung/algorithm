@@ -11,11 +11,11 @@ public class Problem01 {
     public static void main(String[] args) {
         String s = "국민을위한국가";
 
-        boolean Unique = isUnique(s);
-        System.out.println(Unique);
+        boolean unique = isUnique(s);
+        System.out.println(unique);
     }
 
-    public static boolean isUnique(String s) {
+    private static boolean isUnique(String s) {
         for (int i = 0; i < s.length(); i++) {
             char origin = s.charAt(i);
             for (int j = 0; j < s.length(); j++) {
