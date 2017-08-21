@@ -20,10 +20,8 @@ public class Problem01 {
             char origin = s.charAt(i);
             for (int j = 0; j < s.length(); j++) {
                 char temp = s.charAt(j);
-                if (i != j){
-                    if (origin == temp) {
-                        return false;
-                    }
+                if (i != j && origin == temp){
+                    return false;
                 }
             }
         }
