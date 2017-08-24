@@ -26,6 +26,7 @@ public class SimpleLinkedListTest {
 
         list.add(2, 3);
         assert (3 == list.get(2));
+        assert (4 == list.get(3));
 
         list.remove(1);
         list.remove(2);
