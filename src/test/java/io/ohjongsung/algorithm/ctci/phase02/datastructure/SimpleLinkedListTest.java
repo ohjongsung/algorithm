@@ -1,5 +1,6 @@
-package io.ohjongsung.algorithm.ctci.phase02;
+package io.ohjongsung.algorithm.ctci.phase02.datastructure;
 
+import io.ohjongsung.algorithm.ctci.phase02.datastructure.SimpleLinkedList;
 import org.junit.Test;
 
 /**

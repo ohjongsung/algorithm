@@ -1,4 +1,4 @@
-package io.ohjongsung.algorithm.ctci.phase02;
+package io.ohjongsung.algorithm.ctci.phase02.datastructure;
 
 /**
  * Project : algorithm
