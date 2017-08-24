@@ -1,5 +1,7 @@
 package io.ohjongsung.algorithm.ctci.phase02.datastructure;
 
+import java.util.Hashtable;
+
 /**
  * Project : algorithm
  * Developer : ohjongsung
@@ -76,6 +78,22 @@ public class SimpleLinkedList<T> {
 
     public int size() {
         return size;
+    }
+
+    public void removeDuplicate() {
+        Hashtable table = new Hashtable();
+        Node n = header.next;
+        Node prev = null;
+        while (n != null) {
+            if (table.containsKey(n.val)) {
+                prev.next = n.next;
+                size--;
+            } else {
+                table.put(n.val, true);
+                prev = n;
+            }
+            n = n.next;
+        }
     }
 
     @Override
