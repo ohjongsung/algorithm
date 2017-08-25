@@ -8,7 +8,7 @@ import java.util.Hashtable;
  * Date : 2017-08-24
  * Description : 단순 연결 리스트
  */
-public class SimpleLinkedList<T> {
+public class SimplyLinkedList<T> {
     private class Node {
         T val;
         Node next;
@@ -18,7 +18,7 @@ public class SimpleLinkedList<T> {
     private Node header;
     private int size;
 
-    public SimpleLinkedList() {
+    public SimplyLinkedList() {
         header = new Node();
         size = 0;
     }

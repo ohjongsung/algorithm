@@ -1,6 +1,6 @@
 package io.ohjongsung.algorithm.ctci.phase02;
 
-import io.ohjongsung.algorithm.ctci.phase02.datastructure.SimpleLinkedList;
+import io.ohjongsung.algorithm.ctci.phase02.datastructure.SimplyLinkedList;
 
 /**
  * Project : algorithm
@@ -11,7 +11,7 @@ import io.ohjongsung.algorithm.ctci.phase02.datastructure.SimpleLinkedList;
  */
 public class Problem01 {
     public static void main(String[] args) {
-        SimpleLinkedList<String> duplicatedStrings = new SimpleLinkedList<>();
+        SimplyLinkedList<String> duplicatedStrings = new SimplyLinkedList<>();
         duplicatedStrings.addLast("초복");
         duplicatedStrings.addLast("중복");
         duplicatedStrings.addLast("말복");

@@ -1,6 +1,5 @@
 package io.ohjongsung.algorithm.ctci.phase02.datastructure;
 
-import io.ohjongsung.algorithm.ctci.phase02.datastructure.SimpleLinkedList;
 import org.junit.Test;
 
 /**
@@ -9,11 +8,11 @@ import org.junit.Test;
  * Date : 2017-08-24
  * Description : 단순 연결 리스트 테스트
  */
-public class SimpleLinkedListTest {
+public class SimplyLinkedListTest {
 
     @Test
     public void test() {
-        SimpleLinkedList<Integer> list = new SimpleLinkedList<>();
+        SimplyLinkedList<Integer> list = new SimplyLinkedList<>();
         list.addLast(1);
         list.addLast(2);
         list.addLast(4);
