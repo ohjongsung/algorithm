@@ -32,5 +32,19 @@ public class SimplyLinkedListTest {
 
         assert (3 == list.size());
         assert (4 == list.get(1));
+
+        SimplyLinkedList<String> duplicatedStrings = new SimplyLinkedList<>();
+        duplicatedStrings.addLast("초복");
+        duplicatedStrings.addLast("중복");
+        duplicatedStrings.addLast("말복");
+        duplicatedStrings.addLast("중복");
+        duplicatedStrings.addLast("말복");
+        System.out.println(duplicatedStrings.toString());
+        duplicatedStrings.removeDuplicate();
+        assert (3 == duplicatedStrings.size());
+        assert ("초복".equals(duplicatedStrings.get(0)));
+        assert ("중복".equals(duplicatedStrings.get(1)));
+        assert ("말복".equals(duplicatedStrings.get(2)));
+        System.out.println(duplicatedStrings.toString());
     }
 }
