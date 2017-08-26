@@ -44,6 +44,7 @@ public class SimplyLinkedList<T> {
         return add(size, val);
     }
 
+    // 03. 노드 삭제
     public T remove(int pos) {
         if (pos < 0 || pos > size) {
             return null;
@@ -80,6 +81,7 @@ public class SimplyLinkedList<T> {
         return size;
     }
 
+    // 01. 중복 문자 제거
     public void removeDuplicate() {
         Hashtable table = new Hashtable();
         Node n = header.next;
@@ -94,6 +96,48 @@ public class SimplyLinkedList<T> {
             }
             n = n.next;
         }
+    }
+
+    // 02. 뒤에서 k번째 원소 찾기 : size 아는 경우
+    public T getFromEndPos(int posFromEnd) {
+        if (posFromEnd < 0 || posFromEnd > size) {
+            return null;
+        }
+        int pos = size - posFromEnd;
+
+        return get(pos);
+    }
+
+    // 02. 뒤에서 k번째 원소 찾기 : size 모르는 경우
+    public T getFromEndPosWithoutSize(int posFromEnd) {
+        if (posFromEnd < 0 || posFromEnd > size) {
+            return null;
+        }
+        Node p1 = header;
+        Node p2 = header;
+
+        for (int i = 0; i < posFromEnd - 1; i++) {
+            if (p2 == null) {
+                return null;
+            }
+            p2 = p2.next;
+        }
+
+        while (p2.next != null) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return p1.val;
+    }
+
+    // 07. 회문(palindrome)
+    public boolean isPalindrome() {
+        for (int i = 0; i < size / 2; i++) {
+            if (get(i) != get(size - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
