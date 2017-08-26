@@ -26,7 +26,7 @@ public class StackTest {
         assert (0 == numbers.pop());
         assert (0 == numbers.size());
 
-        Stack<Integer> numbersTwo = new Stack<>();
+        StackBetter<Integer> numbersTwo = new StackBetter<>();
         numbersTwo.push(0);
         numbersTwo.push(1);
         numbersTwo.push(2);
