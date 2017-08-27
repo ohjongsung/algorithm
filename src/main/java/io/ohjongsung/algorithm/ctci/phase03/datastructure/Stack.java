@@ -63,6 +63,18 @@ public class Stack<T> {
         size++;
     }
 
+    public static Stack<Integer> sort(Stack<Integer> now) {
+        Stack<Integer> sorted = new Stack<>();
+        while (!now.isEmptry()) {
+            int tmp = now.pop();
+            while (!sorted.isEmptry() && sorted.peek() > tmp) {
+                now.push(sorted.pop());
+            }
+            sorted.push(tmp);
+        }
+        return sorted;
+    }
+
     public boolean isEmptry() {
         return size == 0;
     }
