@@ -38,7 +38,8 @@ public class Problem04 {
     }
 
     public static void moveDisks(int n, Stack origin, Stack destination, Stack buffer) {
-        if (n == 0) return;
+        if (n == 0)
+            return;
 
         moveDisks(n - 1, origin, buffer, destination);
         moveToTop(origin, destination);
