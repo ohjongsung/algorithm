@@ -53,4 +53,21 @@ public class Stack<T> {
     public int size() {
         return size;
     }
+
+    @Override
+    public String toString() {
+        Node lastNode = bottom.next;
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append('[');
+        for (int i = 0; i < size; i++) {
+            sb.append(lastNode.val);
+            lastNode = lastNode.next;
+            if (i < size - 1) {
+                sb.append(',');
+            }
+        }
+        sb.append(']');
+        return sb.toString();
+    }
 }
