@@ -31,6 +31,14 @@ public class StackBetter<T> {
         return retVal;
     }
 
+    public T peek() {
+        if (size == 0) {
+            throw new StackUnderflowException();
+        }
+
+        return top.val;
+    }
+
     public void push(T val) {
         if (size == DEFAULT_MAX_SIZE) {
             throw new StackOverflowException();
@@ -42,6 +50,10 @@ public class StackBetter<T> {
         newbie.next = top;
         top = newbie;
         size++;
+    }
+
+    public boolean isEmptry() {
+        return size == 0;
     }
 
     public int size() {

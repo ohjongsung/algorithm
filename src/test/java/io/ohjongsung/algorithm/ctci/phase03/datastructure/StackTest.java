@@ -18,6 +18,8 @@ public class StackTest {
         numbers.push(1);
         numbers.push(2);
 
+        assert (false == numbers.isEmptry());
+        assert (2 == numbers.peek());
         assert (3 == numbers.size());
         assert (2 == numbers.pop());
         assert (2 == numbers.size());
@@ -25,12 +27,15 @@ public class StackTest {
         assert (1 == numbers.size());
         assert (0 == numbers.pop());
         assert (0 == numbers.size());
+        assert (true == numbers.isEmptry());
 
         StackBetter<Integer> numbersTwo = new StackBetter<>();
         numbersTwo.push(0);
         numbersTwo.push(1);
         numbersTwo.push(2);
 
+        assert (false == numbersTwo.isEmptry());
+        assert (2 == numbersTwo.peek());
         assert (3 == numbersTwo.size());
         assert (2 == numbersTwo.pop());
         assert (2 == numbersTwo.size());
@@ -38,5 +43,6 @@ public class StackTest {
         assert (1 == numbersTwo.size());
         assert (0 == numbersTwo.pop());
         assert (0 == numbersTwo.size());
+        assert (true == numbersTwo.isEmptry());
     }
 }

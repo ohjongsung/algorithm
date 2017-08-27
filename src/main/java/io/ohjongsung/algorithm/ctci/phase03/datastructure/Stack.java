@@ -35,6 +35,19 @@ public class Stack<T> {
         return lastNode.val;
     }
 
+    public T peek() {
+        if (size == 0) {
+            throw new StackUnderflowException();
+        }
+
+        Node lastNode = bottom;
+        while (lastNode.next != null) {
+            lastNode = lastNode.next;
+        }
+
+        return lastNode.val;
+    }
+
     public void push(T val) {
         if (size == DEFAULT_MAX_SIZE) {
             throw new StackOverflowException();
@@ -48,6 +61,10 @@ public class Stack<T> {
         newbie.val = val;
         lastNode.next = newbie;
         size++;
+    }
+
+    public boolean isEmptry() {
+        return size == 0;
     }
 
     public int size() {
