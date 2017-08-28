@@ -46,6 +46,21 @@ public class Queue<T> {
         beforeFirst.next = null;
 
         size--;
+        if (size == 0) {
+            last = null;
+        }
+        return retVal;
+    }
+
+    public T peek() {
+        if (size == 0) {
+            throw new QueueUnderflowException();
+        }
+        Node first = last;
+        while (first.next != null) {
+            first = first.next;
+        }
+        T retVal = first.val;
         return retVal;
     }
 
