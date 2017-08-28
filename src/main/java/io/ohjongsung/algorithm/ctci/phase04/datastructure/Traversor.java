@@ -1,5 +1,7 @@
 package io.ohjongsung.algorithm.ctci.phase04.datastructure;
 
+
+import io.ohjongsung.algorithm.ctci.phase03.datastructure.Queue;
 import io.ohjongsung.algorithm.ctci.phase03.datastructure.Stack;
 
 /**
@@ -33,6 +35,8 @@ public class Traversor {
         inOrderTraverse(root);
         System.out.println();
         inOrderTraverseRecursion(root);
+        System.out.println();
+        levelTraverse(root);
 
     }
 
@@ -139,6 +143,23 @@ public class Traversor {
                     stack.push(node);
                     node = node.getChild(0);
                 }
+            }
+        }
+    }
+
+    public static <T> void levelTraverse(TreeNode<T> root){
+        if (root == null) {
+            return;
+        }
+        TreeNode<T> node = root;
+        Queue<TreeNode<T>> queue = new Queue<>();
+        queue.enqueue(node);
+        while (queue.size() > 0) {
+            if (queue.peek() != null) {
+                node = queue.dequeue();
+                System.out.print(node.getData() + " ");
+                queue.enqueue(node.getChild(0));
+                queue.enqueue(node.getChild(1));
             }
         }
 
