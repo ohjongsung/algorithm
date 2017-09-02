@@ -4,7 +4,7 @@ package io.ohjongsung.algorithm.ctci.phase10;
  * Project : algorithm
  * Developer : ohjongsung
  * Date : 2017-08-31
- * Description : 삽입 정렬 구현 : O(n2)
+ * Description : 삽입 정렬 구현 : O(n^2)
  */
 public class InsertSort {
     public static void main(String[] args) {
