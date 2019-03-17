@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * created by ohjongsung on 2019-03-17
+ * https://www.acmicpc.net/problem/3085
+ * 사탕 게임
+ */
 public class Test3085 {
 	private static char[][] map;
 	private static int max;

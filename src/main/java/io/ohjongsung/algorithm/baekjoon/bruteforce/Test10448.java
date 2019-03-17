@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 /**
  * created by ohjongsung on 2019-03-17
+ * https://www.acmicpc.net/problem/10448
+ * 유레카 이론
  */
 public class Test10448 {
 	private static int[] tStore = new int[44];

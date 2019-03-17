@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * created by ohjongsung on 2019-03-17
+ * https://www.acmicpc.net/problem/2231
+ * 분해합
+ */
 public class Test2231 {
 	public static void main(String[] args) {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
