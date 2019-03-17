@@ -1,4 +1,4 @@
-package io.ohjongsung.algorithm.baekjoon;
+package io.ohjongsung.algorithm.baekjoon.bruteforce;
 
 import java.io.BufferedReader;
 import java.io.IOException;

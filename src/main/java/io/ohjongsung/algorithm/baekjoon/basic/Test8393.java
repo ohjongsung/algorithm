@@ -1,4 +1,4 @@
-package io.ohjongsung.algorithm.baekjoon;
+package io.ohjongsung.algorithm.baekjoon.basic;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package io.ohjongsung.algorithm.baekjoon;
+package io.ohjongsung.algorithm.baekjoon.dynamic;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
