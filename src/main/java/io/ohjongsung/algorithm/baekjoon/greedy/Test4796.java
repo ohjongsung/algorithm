@@ -31,15 +31,14 @@ public class Test4796 {
 	}
 
 	private static void countCampingDays(int l, int p, int v, int cases) {
-		int count;
 		int quotient = v / p;
 		int remainder = v % p;
 
-		count =  quotient * l;
+		int count =  quotient * l;
 		if (remainder < l) {
-			count = count + remainder;
+			count += remainder;
 		} else {
-			count = count + l;
+			count += l;
 		}
 
 		System.out.println(String.format("Case %d: %d", cases, count));
