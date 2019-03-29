@@ -8,6 +8,8 @@ import java.util.Comparator;
 
 /**
  * created by ohjongsung on 2019-03-27
+ * https://www.acmicpc.net/problem/1493
+ * 박스 채우기
  */
 public class Test1493 {
 	private static long LENGTH;
