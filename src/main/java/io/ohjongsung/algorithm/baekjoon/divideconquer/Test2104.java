@@ -13,7 +13,6 @@ import java.util.StringTokenizer;
 public class Test2104 {
 	private static int N;
 	private static long[] arr = new long[100001];
-	private static int max = Integer.MIN_VALUE;
 	public static void main(String[] args) {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			N = Integer.parseInt(br.readLine());
