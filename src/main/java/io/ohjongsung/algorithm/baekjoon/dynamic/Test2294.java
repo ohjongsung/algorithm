@@ -14,7 +14,7 @@ public class Test2294 {
 	private static int N;
 	private static int K;
 	private static int[] COINS;
-	private static int[][] DP;
+	private static int[] DP;
 	private static int IMPOSSIBLE = 1000000000;
 	public static void main(String[] args) {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
@@ -22,16 +22,14 @@ public class Test2294 {
 			N = Integer.parseInt(nk[0]);
 			K = Integer.parseInt(nk[1]);
 			COINS = new int[N];
-			DP = new int[N+1][K+1];
-			for (int i = 0; i < N+1; i++) {
-				Arrays.fill(DP[i], -1);
-			}
+			DP = new int[K+1];
+			Arrays.fill(DP, -1);
 			for (int i = 0; i < N; i++) {
 				COINS[i] = Integer.parseInt(br.readLine());
 			}
 
-			int result = resolve(0, K);
-			if (result == IMPOSSIBLE) {
+			int result = resolve(K);
+			if (result >= IMPOSSIBLE) {
 				System.out.println(-1);
 			} else {
 				System.out.println(result);
@@ -41,16 +39,22 @@ public class Test2294 {
 		}
 	}
 
-	private static int resolve(int n, int k) {
-        if (n == N)
-            return (k == 0 ? 0 : IMPOSSIBLE);
-        if (DP[n][k] != -1)
-            return DP[n][k];
+	private static int resolve(int money) {
+		if (money == 0) {
+			return 0;
+		}
 
-        int result = resolve(n + 1, k);
-        if (k >= COINS[n])
-            result = Math.min(result, resolve(n, k - COINS[n]) + 1);
-        DP[n][k] = result;
-        return result;
+		if (DP[money] != -1) {
+			return DP[money];
+		}
+
+		int result = IMPOSSIBLE;
+		for (int i = 0; i < N; i++) {
+			if (money >= COINS[i]) {
+				result = Math.min(result, resolve(money - COINS[i]) + 1);
+			}
+		}
+
+		return DP[money] = result;
 	}
 }
